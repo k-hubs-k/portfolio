@@ -1,0 +1,82 @@
+{
+  "name": "Your Name",
+  "title": "Full Stack Developer & Freelancer",
+  "email": "your.email@example.com",
+  "github": "https://github.com/yourusername",
+  "linkedin": "https://linkedin.com/in/yourusername",
+  "website": "https://yourwebsite.com",
+  "about": "I'm a passionate full-stack developer specializing in building modern web applications.\nWith expertise in React, TypeScript, Node.js, and cloud technologies, I help businesses\nbring their ideas to life through clean, efficient, and scalable code.\n\nAvailable for freelance projects and consulting opportunities.",
+  "skills": {
+    "Languages": ["JavaScript", "TypeScript", "Python", "HTML/CSS", "SQL"],
+    "Frontend": ["React", "Next.js", "Vue.js", "Tailwind CSS", "Redux"],
+    "Backend": ["Node.js", "Express", "Django", "PostgreSQL", "MongoDB"],
+    "Tools & Others": ["Git", "Docker", "AWS", "CI/CD", "REST APIs", "GraphQL"]
+  },
+  "projects": [
+    {
+      "name": "E-Commerce Platform",
+      "description": "A full-stack e-commerce solution with payment integration",
+      "technologies": ["React", "Node.js", "PostgreSQL", "Stripe"],
+      "link": "https://github.com/yourusername/ecommerce",
+      "highlights": [
+        "Built scalable REST API handling 10k+ daily requests",
+        "Implemented secure payment processing with Stripe",
+        "Optimized database queries reducing load time by 60%"
+      ]
+    },
+    {
+      "name": "Task Management App",
+      "description": "Real-time collaborative task management tool",
+      "technologies": ["Next.js", "TypeScript", "Firebase", "Tailwind"],
+      "link": "https://github.com/yourusername/taskapp",
+      "highlights": [
+        "Real-time updates using WebSockets",
+        "Drag-and-drop interface with smooth animations",
+        "User authentication and role-based access control"
+      ]
+    },
+    {
+      "name": "AI Content Generator",
+      "description": "AI-powered content creation tool for marketers",
+      "technologies": ["React", "Python", "OpenAI API", "FastAPI"],
+      "link": "https://github.com/yourusername/ai-content",
+      "highlights": [
+        "Integrated GPT-4 for content generation",
+        "Built responsive UI with real-time preview",
+        "Implemented rate limiting and caching"
+      ]
+    }
+  ],
+  "experience": [
+    {
+      "role": "Senior Full Stack Developer",
+      "company": "Tech Startup Inc.",
+      "period": "2022 - Present",
+      "description": "Leading development of core product features and mentoring junior developers"
+    },
+    {
+      "role": "Freelance Developer",
+      "company": "Self-Employed",
+      "period": "2020 - Present",
+      "description": "Building custom web applications for clients across various industries"
+    },
+    {
+      "role": "Frontend Developer",
+      "company": "Digital Agency",
+      "period": "2019 - 2022",
+      "description": "Developed responsive websites and web applications for enterprise clients"
+    }
+  ],
+  "education": [
+    {
+      "degree": "Bachelor of Science in Computer Science",
+      "institution": "University Name",
+      "year": "2019"
+    }
+  ],
+  "certifications": [
+    "AWS Certified Developer - Associate",
+    "MongoDB Certified Developer",
+    "Google Cloud Professional"
+  ]
+}

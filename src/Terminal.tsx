@@ -1,15 +1,13 @@
 import { useRef, useState } from "react";
-import type { HistoryEntry } from "./types/terminal";
 import useTerminal from "./hooks/use-terminal";
 
 const Terminal = () => {
   const [suggestion, setSuggestion] = useState("");
-  const [history, setHistory] = useState<HistoryEntry[]>([]);
   const inputRef = useRef<HTMLInputElement>(null);
   const terminalRef = useRef<HTMLDivElement>(null);
   const bottomRef = useRef<HTMLDivElement>(null);
 
-  const { handleKeyDown, input, setInput } = useTerminal();
+  const { handleKeyDown, input, setInput, history } = useTerminal();
 
   return (
     <div className="w-[90%] max-w-[1200px] h-[85vh] my-8 mx-auto bg-[#1e1e1e] rounded-lg shadow-[0_20px_60px_rgba(0,0,0,0.5)] flex flex-col overflow-hidden font-mono md:w-[95%] md:h-[90vh] md:my-4">

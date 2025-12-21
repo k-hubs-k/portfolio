@@ -10,3 +10,10 @@ export interface HistoryEntry {
   output: CommandOutput;
   timestamp: Date;
 }
+
+export interface Command {
+  name: string;
+  description: string;
+  usage?: string;
+  execute: (args: string[]) => CommandOutput;
+}
