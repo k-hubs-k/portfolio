@@ -142,3 +142,10 @@ export const executeCommand = (input: string): CommandOutput => {
 
   return command.execute(args);
 };
+
+export const getCommandSuggestions = (input: string): string[] => {
+  if (!input) return [];
+
+  const commandNames = Object.keys(commands);
+  return commandNames.filter((cmd) => cmd.startsWith(input.toLowerCase()));
+};

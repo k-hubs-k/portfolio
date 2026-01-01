@@ -1,16 +1,26 @@
-import { useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 import useTerminal from "./hooks/use-terminal";
 
 const Terminal = () => {
-  const [suggestion, setSuggestion] = useState("");
   const inputRef = useRef<HTMLInputElement>(null);
   const terminalRef = useRef<HTMLDivElement>(null);
   const bottomRef = useRef<HTMLDivElement>(null);
 
-  const { handleKeyDown, input, setInput, history } = useTerminal();
+  const { handleKeyDown, input, setInput, history, suggestion } = useTerminal();
+
+  useEffect(() => {
+    bottomRef.current?.scrollIntoView({ behavior: "smooth" });
+  }, [history]);
+
+  const focusInput = () => {
+    inputRef.current?.focus();
+  };
 
   return (
-    <div className="w-[90%] max-w-[1200px] h-[85vh] my-8 mx-auto bg-[#1e1e1e] rounded-lg shadow-[0_20px_60px_rgba(0,0,0,0.5)] flex flex-col overflow-hidden font-mono md:w-[95%] md:h-[90vh] md:my-4">
+    <div
+      className="w-[90%] max-w-[1200px] h-[85vh] my-8 mx-auto bg-[#1e1e1e] rounded-lg shadow-[0_20px_60px_rgba(0,0,0,0.5)] flex flex-col overflow-hidden font-mono md:w-[95%] md:h-[90vh] md:my-4"
+      onClick={focusInput}
+    >
       {/* Terminal Header */}
       <div className="bg-[#2d2d2d] px-4 py-3 flex items-center gap-4 border-b border-[#3d3d3d]">
         <div className="flex gap-2">
