@@ -1,1 +1,90 @@
 @import "tailwindcss";
+
+/* ============================================
+   CUSTOM TERMINAL SCROLLBAR STYLES
+   ============================================ */
+
+/* Webkit browsers (Chrome, Safari, Edge) */
+.terminal-scrollbar::-webkit-scrollbar {
+  width: 10px;
+}
+
+.terminal-scrollbar::-webkit-scrollbar-track {
+  background: #1e1e1e;
+  border-radius: 4px;
+}
+
+.terminal-scrollbar::-webkit-scrollbar-thumb {
+  background: #3d3d3d;
+  border-radius: 4px;
+  border: 2px solid #1e1e1e;
+}
+
+.terminal-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #4d4d4d;
+}
+
+/* Firefox */
+.terminal-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: #3d3d3d #1e1e1e;
+}
+
+/* ============================================
+   RESPONSIVE UTILITIES
+   ============================================ */
+
+/* Prevent horizontal overflow on all elements */
+* {
+  box-sizing: border-box;
+}
+
+/* Ensure body and root don't cause horizontal scroll */
+html,
+body {
+  overflow-x: hidden;
+  width: 100%;
+}
+
+/* ============================================
+   TOUCH OPTIMIZATION
+   ============================================ */
+
+/* Improve tap targets for mobile */
+@media (hover: none) and (pointer: coarse) {
+  /* Touch device specific styles */
+  .touch-target {
+    min-height: 44px;
+    min-width: 44px;
+  }
+}
+
+/* ============================================
+   TEXT OVERFLOW HANDLING
+   ============================================ */
+
+/* Utility for breaking long URLs and text */
+.break-words-safe {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  hyphens: auto;
+}
+
+/* For code/monospace text that should scroll instead of break */
+.scroll-on-overflow {
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* ============================================
+   SMOOTH TRANSITIONS
+   ============================================ */
+
+/* Smooth transitions for responsive changes */
+@media (prefers-reduced-motion: no-preference) {
+  .smooth-responsive {
+    transition: all 0.2s ease-in-out;
+  }
+}
