@@ -53,7 +53,7 @@ const useTerminal = () => {
     setInput("");
   };
 
-  const handleKeyDown = (e: KeyboardEvent<HTMLInputElement>) => {
+  const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
     const key = e.key;
 
     if (key === "Enter") {
