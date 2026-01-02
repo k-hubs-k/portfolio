@@ -1,10 +1,10 @@
 {
-  "name": "Your Name",
+  "name": "RAHERIMANANTENA Fedro Hubert",
   "title": "Full Stack Developer & Freelancer",
-  "email": "your.email@example.com",
-  "github": "https://github.com/yourusername",
-  "linkedin": "https://linkedin.com/in/yourusername",
-  "website": "https://yourwebsite.com",
+  "email": "raherihubert@gmail.com",
+  "github": "https://github.com/k-hubs-k",
+  "linkedin": "https://www.linkedin.com/in/hubert-raherimanantena-97a485324/",
+  "website": "https://github.com/k-hubs-k",
   "about": "I'm a passionate full-stack developer specializing in building modern web applications.\nWith expertise in React, TypeScript, Node.js, and cloud technologies, I help businesses\nbring their ideas to life through clean, efficient, and scalable code.\n\nAvailable for freelance projects and consulting opportunities.",
   "skills": {
     "Languages": ["JavaScript", "TypeScript", "Python", "HTML/CSS", "SQL"],
@@ -14,69 +14,67 @@
   },
   "projects": [
     {
-      "name": "E-Commerce Platform",
-      "description": "A full-stack e-commerce solution with payment integration",
-      "technologies": ["React", "Node.js", "PostgreSQL", "Stripe"],
-      "link": "https://github.com/yourusername/ecommerce",
+      "name": "Medical appointment website",
+      "description": "Web applications that allow patients to book appointments online with healthcare professionals",
+      "technologies": ["React", "TypeScript", "PostgresSQL"],
+      "link": "https://app.meddoc.mg",
       "highlights": [
-        "Built scalable REST API handling 10k+ daily requests",
-        "Implemented secure payment processing with Stripe",
-        "Optimized database queries reducing load time by 60%"
+        "Adapted to the Malagasy context",
+        "Reducing queues",
+        "Well-organized, centralized and secure medical data"
       ]
     },
     {
-      "name": "Task Management App",
-      "description": "Real-time collaborative task management tool",
-      "technologies": ["Next.js", "TypeScript", "Firebase", "Tailwind"],
-      "link": "https://github.com/yourusername/taskapp",
+      "name": "Speech to text",
+      "description": "End of year project in L3",
+      "technologies": ["Python", "React", "FastAPI"],
+      "link": "",
       "highlights": [
-        "Real-time updates using WebSockets",
-        "Drag-and-drop interface with smooth animations",
-        "User authentication and role-based access control"
+        "Translate directly Malagasy spoken language in text",
+        "Real-time updates"
       ]
     },
     {
-      "name": "AI Content Generator",
-      "description": "AI-powered content creation tool for marketers",
-      "technologies": ["React", "Python", "OpenAI API", "FastAPI"],
-      "link": "https://github.com/yourusername/ai-content",
+      "name": "Crypto-cli",
+      "description": "Encrypt/descrypt file in terminal",
+      "technologies": ["python"],
+      "link": "https://github.com/k-hubs-k/crypto-cli",
       "highlights": [
-        "Integrated GPT-4 for content generation",
-        "Built responsive UI with real-time preview",
-        "Implemented rate limiting and caching"
+        "AES file encryption",
+        "AES file decryption",
+        "Real progress bar (large files supported)",
+        "Standardized exit codes",
+        "Verbose mode with full stack trace",
+        "Clean handling of Ctrl+C"
+      ]
+    },
+    {
+      "name": "Password storage",
+      "description": "A cross-platform desktop password manager built with Electron and TypeScript, designed as a learning project to explore desktop application development and applied cryptography ",
+      "technologies": ["React", "Electron", "TypeScript"],
+      "link": "https://github.com/k-hubs-k/password-storage",
+      "highlights": [
+        "Master Password Protection - Single master password to unlock your vault",
+        "Secure Setup - Easy first-time vault creation with password strength validation",
+        "Auto-Lock - Automatically locks vault after 15 minutes of inactivity",
+        "Manual Lock - Lock your vault anytime with one click"
       ]
     }
   ],
   "experience": [
     {
-      "role": "Senior Full Stack Developer",
-      "company": "Tech Startup Inc.",
-      "period": "2022 - Present",
-      "description": "Leading development of core product features and mentoring junior developers"
-    },
-    {
-      "role": "Freelance Developer",
-      "company": "Self-Employed",
-      "period": "2020 - Present",
-      "description": "Building custom web applications for clients across various industries"
-    },
-    {
-      "role": "Frontend Developer",
-      "company": "Digital Agency",
-      "period": "2019 - 2022",
-      "description": "Developed responsive websites and web applications for enterprise clients"
+      "role": "Full Stack Developer",
+      "company": "MEDDoC",
+      "period": "2024-2025",
+      "description": "Developer of core product features design and deploiment"
     }
   ],
   "education": [
     {
-      "degree": "Bachelor of Science in Computer Science",
-      "institution": "University Name",
-      "year": "2019"
+      "degree": "Bachelor's degree in Computer Science",
+      "institution": "ISPM Antsobolo, Madagascar",
+      "year": "2025"
     }
   ],
-  "certifications": [
-    "AWS Certified Developer - Associate",
-    "MongoDB Certified Developer",
-    "Google Cloud Professional"
-  ]
+  "certifications": []
 }

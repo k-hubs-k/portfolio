@@ -103,7 +103,19 @@ export const commands: Record<string, Command> = {
   date: {
     name: "date",
     description: "Display current date and time",
-    execute: () => createOutput(new Date().toString(), "info"),
+    execute: () =>
+      createOutput(
+        new Date().toLocaleString("en-US", {
+          timeZone: "Etc/GMT-3", // Note: Sign is inverted in 'Etc' format
+          year: "numeric",
+          month: "2-digit",
+          day: "2-digit",
+          hour: "2-digit",
+          minute: "2-digit",
+          second: "2-digit",
+        }),
+        "info",
+      ),
   },
 
   echo: {
