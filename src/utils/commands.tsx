@@ -10,6 +10,9 @@ import Experiences from "../components/Experiences";
 import Educations from "../components/Educations";
 import Contacts from "../components/Contacts";
 import Welcome from "../components/Welcome";
+import Hire from "../components/Hire";
+import CV from "../components/CV";
+import cvPdf from "../data/hubs-cv.pdf";
 
 export const commands: Record<string, Command> = {
   help: {
@@ -129,6 +132,45 @@ export const commands: Record<string, Command> = {
     name: "welcome",
     description: "Display welcome message",
     execute: () => createOutput(<Welcome name={portfolioData.name} />, "info"),
+  },
+
+  hire: {
+    name: "hire",
+    description: "Interested in hiring me? Send me an email!",
+    execute: () => {
+      const subject = encodeURIComponent("Hiring Inquiry from Portfolio Terminal");
+      const mailtoLink = `mailto:${portfolioData.email}?subject=${subject}`;
+
+      // Open mailto link
+      window.location.href = mailtoLink;
+
+      return createOutput(<Hire email={portfolioData.email} />, "info");
+    },
+  },
+
+  cv: {
+    name: "cv",
+    description: "Download my CV/Resume (PDF)",
+    execute: () => {
+      // Create a temporary link and trigger download
+      const link = document.createElement("a");
+      link.href = cvPdf;
+      link.download = `${portfolioData.name.replace(/\s+/g, "_")}_CV.pdf`;
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+
+      return createOutput(<CV name={portfolioData.name} />, "info");
+    },
+  },
+
+  resume: {
+    name: "resume",
+    description: "Download my CV/Resume (PDF) - alias for 'cv'",
+    execute: () => {
+      // Reuse cv command logic
+      return commands.cv.execute([]);
+    },
   },
 };
 

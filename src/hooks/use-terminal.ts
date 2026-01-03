@@ -33,24 +33,33 @@ const useTerminal = () => {
     }
   }, [input]);
 
-  const handleSubmit = () => {
-    if (!input.trim()) return;
+  const handleSubmit = (commandToExecute?: string) => {
+    const commandInput = commandToExecute || input;
+    if (!commandInput.trim()) return;
 
-    const output = executeCommand(input);
+    const output = executeCommand(commandInput);
 
     // handle clear command specially
-    if (input.trim().toLowerCase() === "clear") {
+    if (commandInput.trim().toLowerCase() === "clear") {
       setHistory([]);
       setInput("");
-      setCommandHistory([...commandHistory, input]);
+      setCommandHistory([...commandHistory, commandInput]);
       setHistoryIndex(-1);
       return;
     }
 
-    setHistory([...history, { command: input, output, timestamp: new Date() }]);
-    setCommandHistory([...commandHistory, input]);
+    setHistory([
+      ...history,
+      { command: commandInput, output, timestamp: new Date() },
+    ]);
+    setCommandHistory([...commandHistory, commandInput]);
     setHistoryIndex(-1);
     setInput("");
+  };
+
+  // Programmatic command execution for tour
+  const executeCommandProgrammatically = (command: string) => {
+    handleSubmit(command);
   };
 
   const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
@@ -95,6 +104,14 @@ const useTerminal = () => {
     }
   };
 
+  const executeTerminalCommand = (command: string) => {
+    const output = executeCommand(command);
+    setHistory([
+      ...history,
+      { command: command, output, timestamp: new Date() },
+    ]);
+  };
+
   return {
     handleKeyDown,
     input,
@@ -103,6 +120,8 @@ const useTerminal = () => {
     setHistory,
     historyIndex,
     suggestion,
+    executeCommandProgrammatically,
+    executeCommand: executeTerminalCommand,
   };
 };
 
