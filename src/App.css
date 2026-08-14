@@ -1,1 +1,195 @@
 @import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, sans-serif;
+  --font-display: "Sora", "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+
+  --animate-marquee: marquee 36s linear infinite;
+  @keyframes marquee {
+    to {
+      transform: translateX(-50%);
+    }
+  }
+
+  --animate-blink: blink 1.1s steps(2, start) infinite;
+  @keyframes blink {
+    to {
+      visibility: hidden;
+    }
+  }
+}
+
+/* Colors are runtime-switched via --ctp-* custom properties.
+   @theme inline inlines the var() reference so utilities re-resolve
+   when the [data-theme] attribute changes. */
+@theme inline {
+  --color-base: var(--ctp-base);
+  --color-mantle: var(--ctp-mantle);
+  --color-crust: var(--ctp-crust);
+  --color-surface0: var(--ctp-surface0);
+  --color-surface1: var(--ctp-surface1);
+  --color-surface2: var(--ctp-surface2);
+  --color-overlay0: var(--ctp-overlay0);
+  --color-overlay1: var(--ctp-overlay1);
+  --color-overlay2: var(--ctp-overlay2);
+  --color-subtext0: var(--ctp-subtext0);
+  --color-subtext1: var(--ctp-subtext1);
+  --color-text: var(--ctp-text);
+  --color-lavender: var(--ctp-lavender);
+  --color-blue: var(--ctp-blue);
+  --color-sapphire: var(--ctp-sapphire);
+  --color-sky: var(--ctp-sky);
+  --color-teal: var(--ctp-teal);
+  --color-green: var(--ctp-green);
+  --color-yellow: var(--ctp-yellow);
+  --color-peach: var(--ctp-peach);
+  --color-maroon: var(--ctp-maroon);
+  --color-red: var(--ctp-red);
+  --color-mauve: var(--ctp-mauve);
+  --color-pink: var(--ctp-pink);
+  --color-flamingo: var(--ctp-flamingo);
+  --color-rosewater: var(--ctp-rosewater);
+}
+
+/* Catppuccin Mocha — dark */
+:root {
+  --ctp-base: #1e1e2e;
+  --ctp-mantle: #181825;
+  --ctp-crust: #11111b;
+  --ctp-surface0: #313244;
+  --ctp-surface1: #45475a;
+  --ctp-surface2: #585b70;
+  --ctp-overlay0: #6c7086;
+  --ctp-overlay1: #7f849c;
+  --ctp-overlay2: #9399b2;
+  --ctp-subtext0: #a6adc8;
+  --ctp-subtext1: #bac2de;
+  --ctp-text: #cdd6f4;
+  --ctp-lavender: #b4befe;
+  --ctp-blue: #89b4fa;
+  --ctp-sapphire: #74c7ec;
+  --ctp-sky: #89dceb;
+  --ctp-teal: #94e2d5;
+  --ctp-green: #a6e3a1;
+  --ctp-yellow: #f9e2af;
+  --ctp-peach: #fab387;
+  --ctp-maroon: #eba0ac;
+  --ctp-red: #f38ba8;
+  --ctp-mauve: #cba6f7;
+  --ctp-pink: #f5c2e7;
+  --ctp-flamingo: #f2cdcd;
+  --ctp-rosewater: #f5e0dc;
+}
+
+/* Catppuccin Latte — light */
+html[data-theme="light"] {
+  --ctp-base: #eff1f5;
+  --ctp-mantle: #e6e9ef;
+  --ctp-crust: #dce0e8;
+  --ctp-surface0: #ccd0da;
+  --ctp-surface1: #bcc0cc;
+  --ctp-surface2: #acb0be;
+  --ctp-overlay0: #9ca0b0;
+  --ctp-overlay1: #8c8fa1;
+  --ctp-overlay2: #7c7f93;
+  --ctp-subtext0: #6c6f85;
+  --ctp-subtext1: #5c5f77;
+  --ctp-text: #4c4f69;
+  --ctp-lavender: #7287fd;
+  --ctp-blue: #1e66f5;
+  --ctp-sapphire: #209fb5;
+  --ctp-sky: #04a5e5;
+  --ctp-teal: #179299;
+  --ctp-green: #40a02b;
+  --ctp-yellow: #df8e1d;
+  --ctp-peach: #fe640b;
+  --ctp-maroon: #e64553;
+  --ctp-red: #d20f39;
+  --ctp-mauve: #8839ef;
+  --ctp-pink: #ea76cb;
+  --ctp-flamingo: #dd7878;
+  --ctp-rosewater: #dc8a78;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    color-scheme: dark;
+  }
+
+  html[data-theme="light"] {
+    color-scheme: light;
+  }
+
+  body {
+    @apply bg-base font-sans text-text antialiased;
+  }
+
+  ::selection {
+    background: var(--ctp-mauve);
+    color: var(--ctp-crust);
+  }
+
+  * {
+    transition:
+      background-color 0.25s ease,
+      border-color 0.25s ease,
+      color 0.25s ease,
+      fill 0.25s ease,
+      stroke 0.25s ease;
+  }
+}
+
+@utility glass {
+  background: color-mix(in srgb, var(--ctp-base) 55%, transparent);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid color-mix(in srgb, var(--ctp-surface1) 45%, transparent);
+}
+
+@utility bg-grid {
+  background-image:
+    linear-gradient(
+      to right,
+      color-mix(in srgb, var(--ctp-text) 6%, transparent) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      to bottom,
+      color-mix(in srgb, var(--ctp-text) 6%, transparent) 1px,
+      transparent 1px
+    );
+  background-size: 56px 56px;
+}
+
+@utility text-gradient {
+  background-image: linear-gradient(
+    100deg,
+    var(--ctp-mauve),
+    var(--ctp-blue) 45%,
+    var(--ctp-teal)
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--ctp-mantle);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--ctp-surface1);
+  border: 2px solid var(--ctp-mantle);
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--ctp-mauve);
+}
+
