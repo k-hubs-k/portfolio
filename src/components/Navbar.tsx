@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
-import { useI18n } from "../lib/useI18n"
 import { Menu, X } from "lucide-react"
 import { AnimatePresence, motion } from "motion/react";
 import { EASE } from "../lib/constants";
+import { useI18n } from "../hooks/useI18n";
 
 const SECTION_IDS = ["about", "skills", "projects", "experience", "contact"];
 
@@ -88,7 +88,7 @@ export default function Navbar() {
         </button>
 
         <a href="#contact"
-          className="hidden rounded-full bg-gradient-to-r from-mauve to-blue px-5 py-2 font-mono text-sm font-semibold text-crust transition-transform duration-300 hover:scale-105 hover:shadow-lg hover:shadow-mauve/25 md:inline-block"
+          className="hidden rounded-full bg-linear-to-r from-mauve to-blue px-5 py-2 font-mono text-sm font-semibold text-crust transition-transform duration-300 hover:scale-105 hover:shadow-lg hover:shadow-mauve/25 md:inline-block"
         >
           {t.nav.hire}
         </a>
