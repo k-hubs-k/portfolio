@@ -1,5 +1,7 @@
 import { motion, useMotionValue, useSpring } from "motion/react";
+import { div } from "motion/react-client";
 import { useRef, type MouseEvent, type ReactNode } from "react";
+import { EASE } from "./constants";
 
 export interface MagneticProps {
   children: ReactNode, strength?: number, className?: string
@@ -41,5 +43,45 @@ export function Magnetic({
     >
       {children}
     </motion.div>
+  )
+}
+
+interface RevealProps {
+  children: ReactNode,
+  delay?: number,
+  y?: number,
+  className?: string
+}
+
+export function Reveal({ children, delay = 0, y = 28, className = "" }: RevealProps) {
+  return (
+    <motion.div
+      initial={{ opacity: 0, y }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: "-80px" }}
+      transition={{ duration: 0.7, delay, ease: EASE }}
+      className={className}
+    >
+      {children}
+    </motion.div>
+  )
+}
+
+interface SectionHeadingProps {
+  index: string, tag: string, title: string, center?: boolean
+}
+
+export function SectionHeading({
+  index, tag, title, center = false
+}: SectionHeadingProps) {
+  return (
+    <Reveal className={`mb-14 ${center ? "text-center" : ""}`}>
+      <p className="mb-3 font-mono text-sm text-mauve">
+        <span className="text-surface2">{"//"}</span> {index}. {tag}
+      </p>
+      <h2 className="font-display text-3xl font-bold tracking-tight text-text sm:text-4xl md:text-5xl">
+        {title}
+      </h2>
+    </Reveal>
   )
 }

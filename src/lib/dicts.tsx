@@ -35,6 +35,37 @@ export const en = {
     },
   },
 
+  skills: {
+    tag: "skills",
+    title: "Tech arsenal",
+    groups: [
+      {
+        title: "Frontend",
+        emoji: "🧩",
+        dot: "bg-mauve",
+        skills: ["React", "TypeScript", "Next.js", "Tailwind CSS", "Framer Motion", "Vite"],
+      },
+      {
+        title: "Backend",
+        emoji: "🛠",
+        dot: "bg-green",
+        skills: ["Node.js", "Express", "PostgreSQL", "Prisma", "REST", "GraphQL"],
+      },
+      {
+        title: "Tooling & DevOps",
+        emoji: "🚀",
+        dot: "bg-blue",
+        skills: ["Git & GitHub", "Docker", "CI/CD", "Vitest", "Playwright"],
+      },
+      {
+        title: "Design",
+        emoji: "🎨",
+        dot: "bg-pink",
+        skills: ["Figma", "Design Systems", "UI/UX", "Accessibility", "Motion"],
+      },
+    ],
+  },
+
 }
 
 export type Dict = typeof en;
@@ -73,6 +104,37 @@ export const fr: Dict = {
         { cmd: "git push origin main", out: "→ feat: pre-release ✨" },
       ],
     },
+  },
+
+  skills: {
+    tag: "compétences",
+    title: "Stack technique",
+    groups: [
+      {
+        title: "Frontend",
+        emoji: "🧩",
+        dot: "bg-mauve",
+        skills: ["React", "TypeScript", "Next.js", "Tailwind CSS", "Framer Motion", "Vite"],
+      },
+      {
+        title: "Backend",
+        emoji: "🛠",
+        dot: "bg-green",
+        skills: ["Node.js", "Express", "PostgreSQL", "Prisma", "REST", "GraphQL"],
+      },
+      {
+        title: "Outils & DevOps",
+        emoji: "🚀",
+        dot: "bg-blue",
+        skills: ["Git & GitHub", "Docker", "CI/CD", "Vitest", "Playwright"],
+      },
+      {
+        title: "Design",
+        emoji: "🎨",
+        dot: "bg-pink",
+        skills: ["Figma", "Systèmes de design", "UI/UX", "Accessibilité", "Motion design"],
+      },
+    ],
   },
 }
 

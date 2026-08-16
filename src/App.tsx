@@ -1,6 +1,7 @@
 import './App.css'
 import Hero from './components/Hero'
 import Navbar from './components/Navbar'
+import Skills from './components/Skills'
 import { I18nProvider } from './lib/i18n'
 
 function App() {
@@ -11,6 +12,7 @@ function App() {
         <Navbar />
         <main>
           <Hero />
+          <Skills />
         </main>
       </div>
     </I18nProvider>
