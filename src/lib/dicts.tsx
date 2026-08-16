@@ -34,6 +34,35 @@ export const en = {
       ],
     },
   },
+  about: {
+    tag: "about",
+    title: "About me",
+    p1: (
+      <>
+        A developer focused on <span className="text-teal">backend and software engineering</span>, based in{" "}
+        <span className="text-mauve">Antananarivo, Madagascar</span>. For me, the details that truly matter are on the server-side: API latency, clean transaction management, and rigorous data modeling.
+      </>
+    ),
+    p2: (
+      <>
+        Whether I&apos;m designing microservices, securing authentication flows, or tackling algorithmic challenges, my main focus is always on writing clean, readable, testable, and maintainable code.
+      </>
+    ),
+    stats: [
+      { value: 1, suffix: "", label: "Year of experience" },
+      { value: 10, suffix: "+", label: "Projects & Experiments" },
+      { value: 99.9, suffix: "%", label: "Target uptime" },
+      { value: 400, suffix: "+", label: "Cups of coffee" },
+    ],
+    codeTitle: "~/me.ts",
+    code: {
+      name: "Hubert RAHERIMANANTENA",
+      location: "Antananarivo, Madagascar",
+      role: "Full-Stack developer",
+      focus: '["React", "TypeScript", "Node.js"]',
+      status: "Open to work",
+    },
+  },
 
   skills: {
     tag: "skills",
@@ -49,7 +78,7 @@ export const en = {
         title: "Backend",
         emoji: "🛠",
         dot: "bg-green",
-        skills: ["Node.js", "Express", "PostgreSQL", "Prisma", "REST", "GraphQL"],
+        skills: ["Node.js", "Express", "PostgreSQL", "Prisma", "REST", "NestJS"],
       },
       {
         title: "Tooling & DevOps",
@@ -106,6 +135,35 @@ export const fr: Dict = {
     },
   },
 
+  about: {
+    tag: "à propos",
+    title: "À propos de moi",
+    p1: (
+      <>
+        Développeur orienté <span className="text-teal">backend et ingénierie logicielle</span> à{" "}
+        <span className="text-mauve">Antananarivo, Madagascar</span>. Les détails qui comptent pour moi se trouvent côté serveur : la latence d&apos;une API, la gestion propre des transactions et la modélisation rigoureuse de la donnée.
+      </>
+    ),
+    p2: (
+      <>
+        Qu&apos;il s&apos;agisse de concevoir des microservices, de sécuriser des flux d&apos;authentification ou d&apos;explorer des problématiques d&apos;algorithmique, j&apos;accorde une importance majeure à l&apos;écriture d&apos;un code lisible, testable et maintenable.
+      </>
+    ), stats: [
+      { value: 1, suffix: "", label: "Année d'expérience" },
+      { value: 10, suffix: "+", label: "Projets & Expérimentations" },
+      { value: 99.9, suffix: "%", label: "Uptime visé" },
+      { value: 400, suffix: "+", label: "Tasses de café" },
+    ],
+    codeTitle: "~/moi.ts",
+    code: {
+      name: "Hubert RAHERIMANANTENA",
+      location: "Antananarivo, Madagascar",
+      role: "Développeur Full-Stack",
+      focus: '["React", "TypeScript", "Node.js"]',
+      status: "Disponible",
+    },
+  },
+
   skills: {
     tag: "compétences",
     title: "Stack technique",
@@ -120,7 +178,7 @@ export const fr: Dict = {
         title: "Backend",
         emoji: "🛠",
         dot: "bg-green",
-        skills: ["Node.js", "Express", "PostgreSQL", "Prisma", "REST", "GraphQL"],
+        skills: ["Node.js", "Express", "PostgreSQL", "Prisma", "REST", "NestJS"],
       },
       {
         title: "Outils & DevOps",
