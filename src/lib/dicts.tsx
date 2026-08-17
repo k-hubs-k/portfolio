@@ -104,7 +104,7 @@ export const en = {
     items: [
       {
         title: "Medical appointment website",
-        emoji: "📈",
+        emoji: "🩺",
         description:
           "Web applications that allow patients to book appointments online with healthcare professionals",
         tags: ["React", "TypeScript", "PostgreSQL"],
@@ -113,7 +113,7 @@ export const en = {
       },
       {
         title: "Speech to text",
-        emoji: "📈",
+        emoji: "🗣️",
         description:
           "End of year project in L3",
         tags: ["React", "Python", "FastAPI"],
@@ -122,7 +122,7 @@ export const en = {
       },
       {
         title: "SolfaML",
-        emoji: "📈",
+        emoji: "🎵",
         description:
           "SolfaML is a markup language for composing Solfège or Solfa pieces in a compact format, designed with extensible tooling in mind.",
         tags: ["React", "TypeScript", "Rust"],
@@ -131,7 +131,7 @@ export const en = {
       },
       {
         title: "Crypto-cli",
-        emoji: "📈",
+        emoji: "🔐",
         description:
           "Encrypt/decrypt file in terminal",
         tags: ["Python"],
@@ -140,7 +140,7 @@ export const en = {
       },
       {
         title: "Password storage",
-        emoji: "📈",
+        emoji: "🔑",
         description:
           "A cross-platform desktop password manager built with Electron and TypeScript, designed as a learning project to explore desktop application development and applied cryptography ",
         tags: ["React", "Electron", "TypeScript"],
@@ -297,7 +297,7 @@ export const fr: Dict = {
     items: [
       {
         title: "Plateforme de prise de rdv médical",
-        emoji: "📈",
+        emoji: "🩺",
         description:
           "Application web permettant la prise de rendez-vous en ligne et la gestion de planning pour les professionnels de santé.",
         tags: ["React", "TypeScript", "PostgreSQL"],
@@ -306,7 +306,7 @@ export const fr: Dict = {
       },
       {
         title: "Reconnaissance vocale (Speech to Text)",
-        emoji: "📈",
+        emoji: "🗣️",
         description:
           "Projet de fin d'études de Licence (L3) axé sur la transcription audio en texte via des modèles de traitement du signal vocal.",
         tags: ["React", "Python", "FastAPI"],
@@ -315,7 +315,7 @@ export const fr: Dict = {
       },
       {
         title: "SolfaML",
-        emoji: "📈",
+        emoji: "🎵",
         description:
           "Langage de balisage léger pour la composition et le traitement de partitions en solfège, conçu pour être extensible et intégrable dans divers outils.",
         tags: ["React", "TypeScript", "Rust"],
@@ -324,7 +324,7 @@ export const fr: Dict = {
       },
       {
         title: "Crypto-CLI",
-        emoji: "📈",
+        emoji: "🔐",
         description:
           "Outil en ligne de commande pour le chiffrement et le déchiffrement sécurisé de fichiers directement depuis le terminal.",
         tags: ["Python"],
@@ -333,7 +333,7 @@ export const fr: Dict = {
       },
       {
         title: "Gestionnaire de mots de passe",
-        emoji: "📈",
+        emoji: "🔑",
         description:
           "Application desktop multiplateforme explorant l'ingénierie logicielle client et le chiffrement de données sensibles stockées en local.",
         tags: ["React", "Electron", "TypeScript"],
