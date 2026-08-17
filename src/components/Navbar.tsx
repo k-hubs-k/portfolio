@@ -58,7 +58,7 @@ export default function Navbar() {
   return (
     <header
       className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${scrolled || open
-        ? "glass shadow-[0_10px_40px_rgb(0_0_0/0.3)]"
+        ? "bg-base shadow-[0_10px_40px_rgb(0_0_0/0.3)]"
         : "border-b border-transparent bg-transparent"
         }`}
     >

@@ -85,7 +85,7 @@ export const en = {
         title: "Tooling & DevOps",
         emoji: "🚀",
         dot: "bg-blue",
-        skills: ["Git & GitHub", "Docker", "CI/CD", "Vitest", "Playwright"],
+        skills: ["Git & GitHub", "Docker", "CI/CD", "Vitest"],
       },
       {
         title: "Design",
@@ -278,7 +278,7 @@ export const fr: Dict = {
         title: "Outils & DevOps",
         emoji: "🚀",
         dot: "bg-blue",
-        skills: ["Git & GitHub", "Docker", "CI/CD", "Vitest", "Playwright"],
+        skills: ["Git & GitHub", "Docker", "CI/CD", "Vitest"],
       },
       {
         title: "Design",
