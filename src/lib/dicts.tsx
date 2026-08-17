@@ -129,7 +129,28 @@ export const en = {
         ]
       }
     ],
-  }
+  },
+
+  contact: {
+    tag: "contact",
+    title: "Let's connect",
+    lead: "have an opportunity or a project in mind?",
+    heading1: "Let's build something",
+    heading2: "great",
+    heading3: "together.",
+    paragraph:
+      "I'm currently open to new roles and freelance collaborations. Whether it's a product, a team, or just a coffee — my inbox is always open.",
+    copied: "Copied!",
+  },
+  footer: {
+    rights: "crafted with React, TypeScript, Tailwind & Framer Motion",
+    catppuccin: "Catppuccin Mocha",
+    backToTop: "Back to top",
+  },
+  meta: {
+    switchTheme: "Toggle theme",
+    switchLang: "Switch language",
+  },
 }
 
 export type Dict = typeof en;
@@ -264,7 +285,28 @@ export const fr: Dict = {
         ]
       }
     ],
-  }
+  },
+
+  contact: {
+    tag: "contact",
+    title: "Contact",
+    lead: "une opportunité ou un projet en tête ?",
+    heading1: "Construisons quelque chose",
+    heading2: "génial",
+    heading3: "ensemble.",
+    paragraph:
+      "Je suis actuellement ouvert aux nouveaux postes et aux collaborations freelance. Qu'il s'agisse d'un produit, d'une équipe ou juste d'un café — ma boîte mail est toujours ouverte.",
+    copied: "Copié !",
+  },
+  footer: {
+    rights: "conçu avec React, TypeScript, Tailwind & Framer Motion",
+    catppuccin: "Catppuccin Mocha",
+    backToTop: "Retour en haut",
+  },
+  meta: {
+    switchTheme: "Changer de thème",
+    switchLang: "Changer de langue",
+  },
 
 }
 
