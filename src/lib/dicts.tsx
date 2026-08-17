@@ -103,14 +103,50 @@ export const en = {
     viewMore: "view more on GitHub",
     items: [
       {
-        title: "Aurora",
+        title: "Medical appointment website",
         emoji: "📈",
         description:
-          "Realtime analytics dashboard streaming live metrics over WebSockets. Interactive D3 charts, zero-jank re-renders and buttery-smooth 60fps.",
-        tags: ["React", "TypeScript", "D3", "WebSockets"],
+          "Web applications that allow patients to book appointments online with healthcare professionals",
+        tags: ["React", "TypeScript", "PostgreSQL"],
         gradient: "from-mauve to-blue",
+        featured: false,
+      },
+      {
+        title: "Speech to text",
+        emoji: "📈",
+        description:
+          "End of year project in L3",
+        tags: ["React", "Python", "FastAPI"],
+        gradient: "from-pink to-peach",
+        featured: false,
+      },
+      {
+        title: "SolfaML",
+        emoji: "📈",
+        description:
+          "SolfaML is a markup language for composing Solfège or Solfa pieces in a compact format, designed with extensible tooling in mind.",
+        tags: ["React", "TypeScript", "Rust"],
+        gradient: "from-green to-teal",
         featured: true,
-      }
+      },
+      {
+        title: "Crypto-cli",
+        emoji: "📈",
+        description:
+          "Encrypt/decrypt file in terminal",
+        tags: ["Python"],
+        gradient: "from-sky to-sapphire",
+        featured: false,
+      },
+      {
+        title: "Password storage",
+        emoji: "📈",
+        description:
+          "A cross-platform desktop password manager built with Electron and TypeScript, designed as a learning project to explore desktop application development and applied cryptography ",
+        tags: ["React", "Electron", "TypeScript"],
+        gradient: "from-lavender to-mauve",
+        featured: false,
+      },
     ],
   },
 
@@ -260,13 +296,49 @@ export const fr: Dict = {
     viewMore: "voir plus sur GitHub",
     items: [
       {
-        title: "Aurora",
+        title: "Plateforme de prise de rdv médical",
         emoji: "📈",
         description:
-          "Dashboard d'analytics temps réel diffusant des métriques live via WebSockets. Graphiques D3 interactifs, zéro re-render parasite et 60fps fluides.",
-        tags: ["React", "TypeScript", "D3", "WebSockets"],
+          "Application web permettant la prise de rendez-vous en ligne et la gestion de planning pour les professionnels de santé.",
+        tags: ["React", "TypeScript", "PostgreSQL"],
         gradient: "from-mauve to-blue",
+        featured: false,
+      },
+      {
+        title: "Reconnaissance vocale (Speech to Text)",
+        emoji: "📈",
+        description:
+          "Projet de fin d'études de Licence (L3) axé sur la transcription audio en texte via des modèles de traitement du signal vocal.",
+        tags: ["React", "Python", "FastAPI"],
+        gradient: "from-pink to-peach",
+        featured: false,
+      },
+      {
+        title: "SolfaML",
+        emoji: "📈",
+        description:
+          "Langage de balisage léger pour la composition et le traitement de partitions en solfège, conçu pour être extensible et intégrable dans divers outils.",
+        tags: ["React", "TypeScript", "Rust"],
+        gradient: "from-green to-teal",
         featured: true,
+      },
+      {
+        title: "Crypto-CLI",
+        emoji: "📈",
+        description:
+          "Outil en ligne de commande pour le chiffrement et le déchiffrement sécurisé de fichiers directement depuis le terminal.",
+        tags: ["Python"],
+        gradient: "from-sky to-sapphire",
+        featured: false,
+      },
+      {
+        title: "Gestionnaire de mots de passe",
+        emoji: "📈",
+        description:
+          "Application desktop multiplateforme explorant l'ingénierie logicielle client et le chiffrement de données sensibles stockées en local.",
+        tags: ["React", "Electron", "TypeScript"],
+        gradient: "from-lavender to-mauve",
+        featured: false,
       },
     ],
   },

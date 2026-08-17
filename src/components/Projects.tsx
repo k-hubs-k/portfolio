@@ -3,6 +3,7 @@ import { useI18n } from "../hooks/useI18n";
 import { Reveal, SectionHeading, SpotlightCard } from "../lib/effects";
 import { Github } from "../lib/brand-icons";
 import { ExternalLink } from "lucide-react";
+import { profile, socials } from "../lib/constants";
 
 export default function Projectss() {
   const { t } = useI18n()
@@ -82,7 +83,7 @@ export default function Projectss() {
 
       <Reveal delay={0.1} className="mt-12 text-center">
         <a
-          href="https://github.com"
+          href={socials.find((el) => el.name === "GitHub")?.url || "https://github.com"}
           target="_blank"
           rel="noreferrer"
           className="group inline-flex items-center gap-2 font-mono text-sm text-subtext0 transition-colors hover:text-mauve"
