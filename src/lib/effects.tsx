@@ -1,4 +1,4 @@
-import { animate, motion, useInView, useMotionValue, useScroll, useSpring, useTransform } from "motion/react";
+import { animate, motion, useInView, useMotionValue, useSpring } from "motion/react";
 import { useEffect, useRef, useState, type MouseEvent, type ReactNode } from "react";
 import { EASE } from "./constants";
 

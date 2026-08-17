@@ -3,7 +3,7 @@ import { useI18n } from "../hooks/useI18n";
 import { Reveal, SectionHeading, SpotlightCard } from "../lib/effects";
 import { Github } from "../lib/brand-icons";
 import { ExternalLink } from "lucide-react";
-import { profile, socials } from "../lib/constants";
+import { socials } from "../lib/constants";
 
 export default function Projectss() {
   const { t } = useI18n()

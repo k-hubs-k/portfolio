@@ -31,7 +31,7 @@ export function useTypewriter(words: string[], typeSpeed = 90, deleteSpeed = 45,
 
     return () => window.clearTimeout(timeout)
 
-  }, [text, deleting, wordIndex, words, typeSpeed, pause])
+  }, [text, deleting, wordIndex, words, typeSpeed, deleteSpeed, pause])
 
   return text
 }
