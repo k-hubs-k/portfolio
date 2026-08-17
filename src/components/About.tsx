@@ -15,7 +15,7 @@ export default function About() {
     <section id="about" className="relative mx-auto max-w-6xl px-6 py-28">
       <SectionHeading index="01" tag={t.about.tag} title={t.about.title} />
 
-      <div className="grid items-center gap-14 lg:grid-cols-[1.15fr_1fr] lg:gap-20">
+      <div className="mb-20 grid items-center gap-14 lg:grid-cols-[1.15fr_1fr] lg:gap-20">
         <div>
           <Reveal>
             <p className="text-lg leading-relaxed text-subtext1">{t.about.p1}</p>
@@ -70,7 +70,7 @@ export default function About() {
 
               <p className="mt-4 text-subtext1">
                 <span className="text-mauve">export default </span>
-                <span className="text-yellow">developer;</span>
+                <span className="text-yellow">developer</span>;
               </p>
             </div>
           </div>

@@ -95,6 +95,41 @@ export const en = {
     ],
   },
 
+  projects: {
+    tag: "projects",
+    title: "Selected work",
+    featured: "featured",
+    viewMore: "view more on GitHub",
+    items: [
+      {
+        title: "Aurora",
+        emoji: "📈",
+        description:
+          "Realtime analytics dashboard streaming live metrics over WebSockets. Interactive D3 charts, zero-jank re-renders and buttery-smooth 60fps.",
+        tags: ["React", "TypeScript", "D3", "WebSockets"],
+        gradient: "from-mauve to-blue",
+        featured: true,
+      }
+    ],
+  },
+
+  experience: {
+    tag: "experience",
+    title: "Work History",
+    items: [
+      {
+        role: "Junior Full-Stack Developer",
+        company: "MEDDoC",
+        period: "2024 - 2025",
+        dot: "bg-mauve",
+        points: [
+          "Contributed to software development for the MEDDoC e-health startup platform.",
+          "Designed and implemented core appointment scheduling workflows for healthcare professionals.",
+          "Optimized critical React component rendering and frontend application performance."
+        ]
+      }
+    ],
+  }
 }
 
 export type Dict = typeof en;
@@ -194,6 +229,43 @@ export const fr: Dict = {
       },
     ],
   },
+
+  projects: {
+    tag: "projets",
+    title: "Projets sélectionnés",
+    featured: "à la une",
+    viewMore: "voir plus sur GitHub",
+    items: [
+      {
+        title: "Aurora",
+        emoji: "📈",
+        description:
+          "Dashboard d'analytics temps réel diffusant des métriques live via WebSockets. Graphiques D3 interactifs, zéro re-render parasite et 60fps fluides.",
+        tags: ["React", "TypeScript", "D3", "WebSockets"],
+        gradient: "from-mauve to-blue",
+        featured: true,
+      },
+    ],
+  },
+
+  experience: {
+    tag: "parcours",
+    title: "Parcours professionnel",
+    items: [
+      {
+        role: "Développeur Full-Stack Junior",
+        company: "MEDDoC",
+        period: "2024 - 2025",
+        dot: "bg-mauve",
+        points: [
+          "Participation active au développement d'une solution logicielle e-santé au sein de la startup MEDDoC.",
+          "Conception et intégration du module de prise de rendez-vous en ligne pour les professionnels de santé.",
+          "Optimisation des performances et de la réactivité des composants React clés de l'application."
+        ]
+      }
+    ],
+  }
+
 }
 
 export const dicts: Record<Lang, Dict> = { en, fr }

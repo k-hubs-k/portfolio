@@ -109,3 +109,38 @@ export function CountUp({ to, suffix = "", duration = 1.6 }: CountUpProps) {
     <span ref={ref}>{value}{suffix}</span>
   )
 }
+
+interface SpotlightCardProps {
+  children: ReactNode,
+  className?: string
+}
+
+export function SpotlightCard({ children, className = "" }: SpotlightCardProps) {
+  const ref = useRef<HTMLDivElement>(null)
+  const [pos, setPos] = useState(({ x: 0, y: 0 }))
+  const [visible, setVisible] = useState(false)
+
+  const onMove = (e: MouseEvent<HTMLDivElement>) => {
+    const r = ref.current?.getBoundingClientRect()
+    if (!r) return;
+    setPos({ x: e.clientX - r.left, y: e.clientY - r.top })
+  }
+
+  return (
+    <div ref={ref}
+      onMouseMove={onMove}
+      onMouseEnter={() => setVisible((true))}
+      onMouseLeave={() => setVisible((false))}
+      className={`relative overflow-hidden ${className}`}
+    >
+      <div
+        className="pointer-events-none absolute inset-0 z-0 transition-opacity duration-300"
+        style={{
+          opacity: visible ? 1 : 0,
+          background: `radial-gradient(360px circle at ${pos.x}px ${pos.y}px, rgb(203 166 247 / 0.14), transparent 65%)`,
+        }}
+      />
+      <div className="relative z-10">{children}</div>
+    </div>
+  )
+}
