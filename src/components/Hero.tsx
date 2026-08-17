@@ -1,9 +1,10 @@
 import { motion, type Variants } from "motion/react";
 import { EASE, profile, socials } from "../lib/constants";
 import { Magnetic } from "../lib/effects";
-import { ArrowDown, ExternalLink } from "lucide-react";
+import { ArrowDown, Download, ExternalLink } from "lucide-react";
 import { useI18n } from "../hooks/useI18n";
 import { useTypewriter } from "../hooks/useTypewriter";
+import useHero from "../hooks/useHero";
 
 const container: Variants = {
   hidden: {},
@@ -25,6 +26,7 @@ const BADGES = [
 export default function Hero() {
   const { t } = useI18n()
   const typed = useTypewriter(t.hero.roles)
+  const { downloadCV } = useHero()
 
   return (
     <section id="hero" className="relative flex min-h-screen items-center overflow-hidden">
@@ -119,6 +121,15 @@ export default function Hero() {
                 className="rounded-full border border-surface1 bg-surface0/30 px-7 py-3.5 font-semibold text-text backdrop-blur transition-colors duration-300 hover:border-mauve/60 hover:text-mauve"
               >
                 {t.hero.getInTouch}
+              </a>
+            </Magnetic>
+            <Magnetic>
+              <a
+                onClick={downloadCV}
+                className="group flex items-center gap-2 rounded-full bg-linear-to-r from-mauve to-blue px-7 py-3.5 font-semibold text-crust shadow-lg shadow-mauve/25 transition-shadow duration-300 hover:shadow-xl hover:shadow-mauve/40"
+              >
+                <Download />
+                {t.hero.downloadCV}
               </a>
             </Magnetic>
           </motion.div>

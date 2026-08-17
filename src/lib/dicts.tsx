@@ -33,6 +33,7 @@ export const en = {
         { cmd: "git push origin main", out: "→ feat: pre-release ✨" },
       ],
     },
+    downloadCV: "Download my CV"
   },
   about: {
     tag: "about",
@@ -189,6 +190,7 @@ export const fr: Dict = {
         { cmd: "git push origin main", out: "→ feat: pre-release ✨" },
       ],
     },
+    downloadCV: "Télécharger mon CV"
   },
 
   about: {
