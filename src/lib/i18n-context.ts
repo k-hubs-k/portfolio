@@ -4,7 +4,8 @@ import type { Dict, Lang } from "./dicts";
 export type I18nContextValue = {
   lang: Lang,
   setLang: (l: Lang) => void
-  toggle: () => void
+  toEnglish: () => void
+  toFrench: () => void
   t: Dict;
 }
 

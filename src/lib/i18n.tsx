@@ -15,10 +15,11 @@ export function I18nProvider({ children }: { children: ReactNode }) {
     document.documentElement.lang = lang;
   }, [lang])
 
-  const toggle = () => setLang((l) => (l === "en" ? "fr" : "en"))
+  const toEnglish = () => setLang("en")
+  const toFrench = () => setLang("fr")
 
   return (
-    <I18nContext.Provider value={{ lang, setLang, toggle, t: dicts[lang] }}>
+    <I18nContext.Provider value={{ lang, setLang, toEnglish, toFrench, t: dicts[lang] }}>
       {children}
     </I18nContext.Provider>
   )

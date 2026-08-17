@@ -8,9 +8,10 @@ import { useTheme } from "../hooks/useTheme";
 const SECTION_IDS = ["about", "skills", "projects", "experience", "contact"];
 
 export default function Navbar() {
-  const { t, lang, toggle } = useI18n();
+  const { t, lang, toEnglish, toFrench } = useI18n();
   const [scrolled, setScrolled] = useState(false)
   const [open, setOpen] = useState(false) // Responsive hamburger menu
+  const [openLanguageSwitcher, setOpenLanguageSwitcher] = useState(false) // Responsive hamburger menu
   const [active, setActive] = useState("");
 
   const { theme, toggle: toggleTheme } = useTheme();
@@ -111,14 +112,47 @@ export default function Navbar() {
             </AnimatePresence>
           </button>
 
-          <button
-            onClick={toggle}
-            className="flex h-9 min-w-10 items-center justify-center rounded-lg border border-surface1/60 bg-surface0/30 px-2.5 font-mono text-xs font-bold text-subtext0 transition-colors hover:border-mauve/60 hover:text-mauve"
-            aria-label={t.meta.switchLang}
-            title={t.meta.switchLang}
-          >
-            {lang === "en" ? "FR" : "EN"}
-          </button>
+          <div className="relative">
+            <button
+              onClick={() => setOpenLanguageSwitcher((val) => !val)}
+              className="flex h-9 min-w-10 items-center justify-center rounded-lg border border-surface1/60 bg-surface0/30 px-2.5 font-mono text-xs font-bold text-subtext0 transition-colors hover:border-mauve/60 hover:text-mauve"
+              aria-label={t.meta.switchLang}
+              title={t.meta.switchLang}
+            >
+              {openLanguageSwitcher ? <X className="w-4 h-4" /> : lang === "fr" ? "FR" : "EN"}
+            </button>
+
+            <AnimatePresence>
+              {openLanguageSwitcher && (
+                <motion.div
+                  initial={{ opacity: 0, height: 0 }}
+                  animate={{ opacity: 1, height: 'auto' }}
+                  exit={{ opacity: 0, height: 0 }}
+                  transition={{ duration: 0.35, ease: EASE }}
+                  className="absolute w-50 h-50 bg-base left-1/2 -translate-x-1/2 overflow-hidden shadow-[0_10px_40px_rgb(0_0_0/0.3)]"
+                >
+                  <ul className="flex flex-col px-6 pb-4">
+                    <li>
+                      <a
+                        onClick={() => { toEnglish(); setOpenLanguageSwitcher(false) }}
+                        className={`flex items-center gap-3 border-b border-surface0/60 py-4 font-mono text-lg text-subtext1 transition-colors hover:text-mauve`}>
+                        EN
+                      </a>
+                    </li>
+
+                    <li>
+                      <a
+
+                        onClick={() => { toFrench(); setOpenLanguageSwitcher(false) }}
+                        className="flex items-center gap-3 border-b border-surface0/60 py-4 font-mono text-lg text-subtext1 transition-colors hover:text-mauve">
+                        FR
+                      </a>
+                    </li>
+                  </ul>
+                </motion.div>
+              )}
+            </AnimatePresence>
+          </div>
 
           <a
             href="#contact"
