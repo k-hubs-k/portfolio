@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
-import { Menu, X } from "lucide-react"
+import { Menu, Moon, Sun, X } from "lucide-react"
 import { AnimatePresence, motion } from "motion/react";
 import { EASE } from "../lib/constants";
 import { useI18n } from "../hooks/useI18n";
+import { useTheme } from "../hooks/useTheme";
 
 const SECTION_IDS = ["about", "skills", "projects", "experience", "contact"];
 
@@ -11,6 +12,8 @@ export default function Navbar() {
   const [scrolled, setScrolled] = useState(false)
   const [open, setOpen] = useState(false) // Responsive hamburger menu
   const [active, setActive] = useState("");
+
+  const { theme, toggle: toggleTheme } = useTheme();
 
   const links = [
     { id: 'about', label: t.nav.about },
@@ -49,6 +52,9 @@ export default function Navbar() {
     return () => observer.disconnect();
   })
 
+  const controlClass =
+    "flex h-9 w-9 items-center justify-center rounded-lg border border-surface1/60 bg-surface0/30 text-subtext0 transition-colors hover:border-mauve/60 hover:text-mauve";
+
   return (
     <header
       className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${scrolled || open
@@ -80,26 +86,56 @@ export default function Navbar() {
           ))}
         </ul>
 
-        <button
-          onClick={toggle}
-          className="flex h-9 min-w-10 items-center justify-center rounded-lg border border-surface1/60 bg-surface0/30 px-2.5 font-mono text-xs font-bold text-subtext0 transition-colors hover:border-mauve/60 hover:text-mauve"
-        >
-          {lang === "en" ? "FR" : "EN"}
-        </button>
+        <div className="flex items-center gap-2.5">
+          <button
+            onClick={toggleTheme}
+            className={controlClass}
+            aria-label={t.meta.switchTheme}
+            title={t.meta.switchTheme}
+          >
+            <AnimatePresence mode="wait" initial={false}>
+              <motion.span
+                key={theme}
+                initial={{ rotate: -90, opacity: 0 }}
+                animate={{ rotate: 0, opacity: 1 }}
+                exit={{ rotate: 90, opacity: 0 }}
+                transition={{ duration: 0.2 }}
+                className="flex"
+              >
+                {theme === "dark" ? (
+                  <Sun className="h-4.5 w-4.5" />
+                ) : (
+                  <Moon className="h-4.5 w-4.5" />
+                )}
+              </motion.span>
+            </AnimatePresence>
+          </button>
 
-        <a href="#contact"
-          className="hidden rounded-full bg-linear-to-r from-mauve to-blue px-5 py-2 font-mono text-sm font-semibold text-crust transition-transform duration-300 hover:scale-105 hover:shadow-lg hover:shadow-mauve/25 md:inline-block"
-        >
-          {t.nav.hire}
-        </a>
+          <button
+            onClick={toggle}
+            className="flex h-9 min-w-10 items-center justify-center rounded-lg border border-surface1/60 bg-surface0/30 px-2.5 font-mono text-xs font-bold text-subtext0 transition-colors hover:border-mauve/60 hover:text-mauve"
+            aria-label={t.meta.switchLang}
+            title={t.meta.switchLang}
+          >
+            {lang === "en" ? "FR" : "EN"}
+          </button>
 
-        <button
-          onClick={() => setOpen((v) => !v)}
-          className="rounded-lg p-2 text-subtext0 transition-colors hover:text-mauve md:hidden"
-          aria-label={open ? "Close menu" : "Open menu"}
-        >
-          {open ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-        </button>
+          <a
+            href="#contact"
+            className="hidden rounded-full bg-gradient-to-r from-mauve to-blue px-5 py-2 font-mono text-sm font-semibold text-crust transition-transform duration-300 hover:scale-105 hover:shadow-lg hover:shadow-mauve/25 md:inline-block"
+          >
+            {t.nav.hire}
+          </a>
+
+          <button
+            onClick={() => setOpen((v) => !v)}
+            className="rounded-lg p-2 text-subtext0 transition-colors hover:text-mauve md:hidden"
+            aria-label={open ? "Close menu" : "Open menu"}
+          >
+            {open ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+          </button>
+        </div>
+
       </nav>
 
       {/* Responsibe hamburger menu */}
