@@ -24,6 +24,14 @@ export default function Navbar() {
     { id: 'contact', label: t.nav.contact },
   ]
 
+  // page title
+  useEffect(() => {
+    document.documentElement.lang = lang;
+    document.title = lang === 'fr'
+      ? "Portfolio | Développeur Full-stack"
+      : "Portfolio | Full-stack & Software Engineer";
+  }, [lang]);
+
   // Scroll effect
   useEffect(() => {
     const onScroll = () => setScrolled((window.scrollY > 24))
