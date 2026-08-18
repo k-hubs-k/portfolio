@@ -3,14 +3,47 @@
 
 <head>
   <meta charset="UTF-8" />
-  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>portfolio-hubert-raherimanantena</title>
+
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <title>Portfolio | Développeur full-stack & Ingénierie Logicielle</title>
+
+  <meta name="description"
+    content="Portfolio de développeur full-stack. Conception d'APIs performantes, interfaces propre et moderne, modélisation de données et code propre." />
+  <meta name="keywords"
+    content="développeur full-stack, software engineer, React, TypeScript, Python, Rust, PostgreSQL, APIs" />
+  <meta name="author" content="Hubert RAHERIMANANTENA" />
+
+  <!-- Open Graph / Facebook / LinkedIn -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://k-hubs-k.github.io/portfolio/" />
+  <meta property="og:title" content="Portfolio | Développeur full-stack & Ingénierie Logicielle" />
+  <meta property="og:description" content="Découvrez mes projets web et ingénierie logicielle." />
+  <meta property="og:image" content="https://k-hubs-k.github.io/portfolio/og-image.png" />
+
+  <!-- Twitter / X -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Portfolio | Développeur full-stack" />
+  <meta name="twitter:description" content="Découvrez mes projets web et ingénierie logicielle." />
+  <meta name="twitter:image" content="https://k-hubs-k.github.io/portfolio/og-image.png" />
 </head>
 
 <body>
   <div id="root"></div>
   <script type="module" src="/src/main.tsx"></script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Votre Nom",
+  "jobTitle": "Backend & Software Engineer",
+  "url": "https://k-hubs-k.github.io/portfolio/",
+  "sameAs": [
+    "https://github.com/k-hubs-k",
+    "https://linkedin.com/in/votre-profil"
+  ]
+}
+</script>
 </body>
 
 </html>

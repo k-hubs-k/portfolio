@@ -9,6 +9,8 @@ import Navbar from './components/Navbar'
 import Projects from './components/Projects'
 import Skills from './components/Skills'
 import { I18nProvider } from './lib/i18n'
+import { useEffect } from 'react'
+import { useI18n } from './hooks/useI18n'
 
 function App() {
   const { scrollYProgress } = useScroll();
@@ -17,6 +19,14 @@ function App() {
     damping: 30,
     restDelta: 0.001,
   });
+  const { lang } = useI18n()
+
+  useEffect(() => {
+    document.documentElement.lang = lang;
+    document.title = lang === 'fr'
+      ? "Portfolio | Développeur Full-stack"
+      : "Portfolio | Full-stack & Software Engineer";
+  }, [lang]);
 
   return (
     <I18nProvider>

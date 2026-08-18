@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://k-hubs-k.github.io/portfolio/sitemap.xml
